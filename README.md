@@ -1,4 +1,5 @@
 Personal vault kinda thing.
+[Hosted on Netlify.](https://anij.netlify.app)
 # Maintainers
 [@anijatsu](https://github.com/anijatsu)
 
