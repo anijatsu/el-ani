@@ -1,0 +1,32 @@
+env:
+  browser: true
+plugins:
+  - eslint-plugin-yaml
+extends: 'eslint:recommended'
+parserOptions:
+  ecmaVersion: 6
+  ecmaFeatures:
+    globalReturn: true
+rules:
+  no-empty: warn
+  comma-style:
+    - warn
+    - last
+  comma-dangle: warn
+  no-undef:
+    - warn
+  indent:
+    - warn
+    - tab
+  linebreak-style: 0
+  quotes:
+    - error
+    - single
+    - avoidEscape: true
+  semi:
+    - error
+    - always
+overrides:
+  - files: ["*.yaml", "*.yml"]
+    plugins: ["yaml"]
+    extends: ["plugin:yaml/recommended"]
