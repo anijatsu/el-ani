@@ -11,12 +11,13 @@
 
         <nav>
             <a href="/">Home</a>
-            <a href="/about">About Me</a>
             <a href="/notes">Notes</a>
         </nav>
     </header>
     <main>
         {{content}}
+		{% include 'backlinks.html' %}
+		<!-- {% include 'links.html' %} -->
     </main>
     
     <footer class="page-footer">
