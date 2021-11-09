@@ -12,10 +12,10 @@ module.exports = {
     type: "note",
     eleventyComputed: {
         title: data => titleCase(data.title || data.page.fileSlug),
-		/* allPages: data => {
+		allPages: data => {
 			const links = data.collections.all;
 			return links;
-		}, */
+		},
         backlinks: (data) => {
             const notes = data.collections.notes;
             const currentFileSlug = data.page.filePathStem.replace('/notes/', '');

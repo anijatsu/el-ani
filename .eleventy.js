@@ -5,7 +5,6 @@ module.exports = function(eleventyConfig) {
         html: true,
         linkify: true
     };
-    
     const md = markdownIt(markdownItOptions)
     .use(require('markdown-it-footnote'))
     .use(require('markdown-it-attrs'))
@@ -21,15 +20,12 @@ module.exports = function(eleventyConfig) {
             }
         })
     })
-    
     eleventyConfig.addFilter("markdownify", string => {
         return md.render(string)
     })
-
     eleventyConfig.setLibrary('md', md);
-    
     eleventyConfig.addCollection("notes", function (collection) {
-        return collection.getFilteredByGlob(["notes/**/*.md", "index.md"]);
+        return collection.getFilteredByGlob(["notes/**\/*.md", "index.md"]);
     });
     
     eleventyConfig.addPassthroughCopy('assets');
